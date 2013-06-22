@@ -21,7 +21,7 @@
         Carro *c = [[Carro alloc] init];
         [c setNome:[NSString stringWithFormat:@"Carro %d", i]];
         [c setDesc:[NSString stringWithFormat:@"Desc Carro %d", i]];
-        [c setUrl_foto:@"Ferrari.png"];
+        [c setUrl_foto:@"ferrari_ff.png"];
         [c setUrl_info:@"http://www.google.com.br"];
         
         //Adiciona o carro no Array e faz o release

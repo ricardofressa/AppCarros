@@ -7,6 +7,8 @@
 //
 
 #import "ListaCarrosViewController.h"
+#import "DetalhesCarrosViewController.h"
+#import "CarroCell.h"
 #import "Alerta.h"
 #import "Carro.h"
 #import "CarroService.h"
@@ -39,20 +41,20 @@
 //Retorna a célula que vai ser o conteúdo para a linha solicitada
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //Cria a célula desta linha da tabela
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"CarroCell";
+    
+    CarroCell *cell = (CarroCell*) [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if(cell == nil){
         //Faz cache da célula para evitar criar muitos objetos desnecessários durante o scroll
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"CarroCell" owner:self options:nil]objectAtIndex:0];
     }
     //Número da linha (0,1,2,3,4 etc)
     NSInteger linha = indexPath.row;
     Carro *c = [carros objectAtIndex:linha];
-    //Texto
-    cell.textLabel.text = c.nome;
-    
-    //Imagem
-    cell.imageView.image = [UIImage imageNamed:c.url_foto];
+    //Nome
+    cell.cellDesc.text = c.nome;
+    //Foto
+    cell.cellImg.image = [UIImage imageNamed:c.url_foto];
     
     return cell;
 }
@@ -62,11 +64,10 @@
     NSInteger linha = indexPath.row;
     Carro *c = [carros objectAtIndex:linha];
     
-    //Cria a mensagem
-    NSString *msg = [NSString stringWithFormat:@"Selecionou o Carro %@", c.nome];
-    
-    //Exibe o alerta
-    [Alerta alerta:msg];
+    //Navega para a tela de detalhes
+    DetalhesCarrosViewController *detalhes = [[[DetalhesCarrosViewController alloc]init]autorelease];
+    detalhes.carro = c;
+    [self.navigationController pushViewController:detalhes animated:YES];
 }
 
 #pragma dealloc

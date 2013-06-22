@@ -40,6 +40,8 @@
 		8C7181C41763D3180090A7FC /* Alerta.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7181C31763D3180090A7FC /* Alerta.m */; };
 		8C7181C71763D5D50090A7FC /* Carro.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7181C61763D5D50090A7FC /* Carro.m */; };
 		8C7181CA1763D8BC0090A7FC /* CarroService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C7181C91763D8BC0090A7FC /* CarroService.m */; };
+		8C9626CC1775DAA4004BE4E3 /* CarroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9626CB1775DAA4004BE4E3 /* CarroCell.m */; };
+		8C9626CE1775DBA7004BE4E3 /* CarroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C9626CD1775DBA7004BE4E3 /* CarroCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,9 @@
 		8C7181C61763D5D50090A7FC /* Carro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carro.m; sourceTree = "<group>"; };
 		8C7181C81763D8BC0090A7FC /* CarroService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarroService.h; sourceTree = "<group>"; };
 		8C7181C91763D8BC0090A7FC /* CarroService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarroService.m; sourceTree = "<group>"; };
+		8C9626CA1775DAA4004BE4E3 /* CarroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarroCell.h; sourceTree = "<group>"; };
+		8C9626CB1775DAA4004BE4E3 /* CarroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarroCell.m; sourceTree = "<group>"; };
+		8C9626CD1775DBA7004BE4E3 /* CarroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarroCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,14 +206,17 @@
 			children = (
 				8C70CCDB17637CFE00D365B2 /* ListaCarrosViewController.h */,
 				8C70CCDC17637CFE00D365B2 /* ListaCarrosViewController.m */,
+				8C70CCDD17637CFE00D365B2 /* ListaCarrosViewController.xib */,
 				8C7181C81763D8BC0090A7FC /* CarroService.h */,
 				8C7181C91763D8BC0090A7FC /* CarroService.m */,
 				8C7181C21763D3180090A7FC /* Alerta.h */,
 				8C7181C31763D3180090A7FC /* Alerta.m */,
-				8C70CCDD17637CFE00D365B2 /* ListaCarrosViewController.xib */,
 				8C70CCE017637D2B00D365B2 /* DetalhesCarrosViewController.h */,
 				8C70CCE117637D2B00D365B2 /* DetalhesCarrosViewController.m */,
 				8C70CCE217637D2B00D365B2 /* DetalhesCarrosViewController.xib */,
+				8C9626CA1775DAA4004BE4E3 /* CarroCell.h */,
+				8C9626CB1775DAA4004BE4E3 /* CarroCell.m */,
+				8C9626CD1775DBA7004BE4E3 /* CarroCell.xib */,
 			);
 			name = ListaCarros;
 			sourceTree = "<group>";
@@ -296,6 +304,7 @@
 				8C70CCDF17637CFE00D365B2 /* ListaCarrosViewController.xib in Resources */,
 				8C70CCE417637D2B00D365B2 /* DetalhesCarrosViewController.xib in Resources */,
 				8C70CCE917637D4600D365B2 /* SobreViewController.xib in Resources */,
+				8C9626CE1775DBA7004BE4E3 /* CarroCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +323,7 @@
 				8C7181C41763D3180090A7FC /* Alerta.m in Sources */,
 				8C7181C71763D5D50090A7FC /* Carro.m in Sources */,
 				8C7181CA1763D8BC0090A7FC /* CarroService.m in Sources */,
+				8C9626CC1775DAA4004BE4E3 /* CarroCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
